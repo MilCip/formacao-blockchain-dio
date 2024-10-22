@@ -4,8 +4,6 @@ const bip39 = require('bip39')
 const bitcoin = require('bitcoinjs-lib')
 
 //definir a rede
-//bitcoin - rede principal - mainnet
-//testnet - rede de teste - tesnet
 const network = bitcoin.networks.testnet
 
 //derivação de carteiras HD
@@ -27,7 +25,7 @@ let btcAddress = bitcoin.payments.p2pkh({
     network: network,
 }).address
 
-console.log("Carteira gerada")
+console.log("Carteira Gerada")
 console.log("Endereço: ", btcAddress)
-console.log("Chave privada:", node.toWIF())
+console.log("Chave Privada:", node.toWIF())
 console.log("Seed:", mnemonic)
